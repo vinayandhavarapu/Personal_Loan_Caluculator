@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Loan Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="loancal">
+    <h1>Loan Calculator</h1>
+    <div class="input">
+      <p>Date of Loan Taken:</p>
+      <input type="date" id="dateInput" />
+
+      <p>Loan Amount (₹):</p>
+      <input id="amount" type="number" min="1" max="5000000" />
+
+      <p>Interest Rate (% per month):</p>
+      <input id="interest_rate" type="number" min="0" max="100" value="2" step=".1" />
+
+      <input type="submit" value="Calculate" onClick="computeLoan()" />
+    </div>
+
+    <div id="results">
+      <table>
+        <tr>
+          <th>Years</th>
+          <th>Months</th>
+          <th>Days</th>
+        </tr>
+        <tr>
+          <td><h3 id="year1"></h3></td>
+          <td><h3 id="month1"></h3></td>
+          <td><h3 id="day1"></h3></td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td style="text-align:right;"><p>Interest Amount (₹):</p></td>
+          <td><h3 id="interest1"></h3></td>
+        </tr>
+        <tr>
+          <td style="text-align:right;"><p>Total Payable (₹):</p></td>
+          <td><h3 id="payment"></h3></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
