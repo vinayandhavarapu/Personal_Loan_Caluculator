@@ -1,4 +1,8 @@
-body {
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
     background: linear-gradient(135deg, #059669, #0ea5e9);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -7,25 +11,26 @@ body {
   
   #loancal {
     width: 90%;
-    max-width: 400px;
+    max-width: 420px;
     background-color: white;
     border-radius: 15px;
-    padding: 30px;
-    margin: 60px auto;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    padding: 25px 20px;
+    margin: 40px auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   }
   
   h1 {
-    font-size: 28px;
+    font-size: 24px;
     text-align: center;
     color: #2563eb;
-    margin-bottom: 30px;
+    margin-bottom: 24px;
   }
   
   .input p {
     color: #1e3a8a;
     font-weight: 600;
-    margin: 12px 0 4px;
+    margin: 12px 0 6px;
+    font-size: 15px;
   }
   
   input[type="number"],
@@ -34,7 +39,8 @@ body {
     padding: 10px;
     border: 1px solid #d1d5db;
     border-radius: 8px;
-    font-size: 16px;
+    font-size: 15px;
+    margin-bottom: 12px;
   }
   
   input[type="submit"] {
@@ -46,7 +52,7 @@ body {
     font-size: 16px;
     cursor: pointer;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 15px;
     transition: background-color 0.3s ease;
   }
   
@@ -57,23 +63,41 @@ body {
   table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 25px;
+    margin-top: 20px;
   }
   
-  table td, table th {
+  table td,
+  table th {
     border: 1px solid #cbd5e1;
     padding: 10px;
     text-align: center;
+    font-size: 14px;
   }
   
-  h2, h3 {
-    text-align: center;
+  h3 {
     color: #0f172a;
-    margin-top: 25px;
+    margin: 5px 0;
     font-size: 16px;
+    text-align: center;
   }
   
-  #results {
-    margin-top: 20px;
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 20px;
+    }
+  
+    input[type="submit"] {
+      font-size: 15px;
+    }
+  
+    table td,
+    table th {
+      padding: 8px;
+      font-size: 13px;
+    }
+  
+    .input p {
+      font-size: 14px;
+    }
   }
   
